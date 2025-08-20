@@ -171,6 +171,174 @@
     }
     
     
+    
+    
+    
+    /* Service Section */
+  .service-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top:50px;
+  }
+
+  /* Each Service Card */
+  .service-card {
+    background: #fff;
+    border-right: 5px solid #0073e6;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Stagger animation delays */
+  .service-card:nth-child(1) { animation-delay: 0.15s; }
+  .service-card:nth-child(2) { animation-delay: 0.35s; }
+  .service-card:nth-child(3) { animation-delay: 0.55s; }
+  .service-card:nth-child(4) { animation-delay: 0.75s; }
+  .service-card:nth-child(5) { animation-delay: 0.95s; }
+  .service-card:nth-child(6) { animation-delay: 1.15s; }
+
+  .service-card:hover {
+    box-shadow: 0 18px 40px rgba(0, 115, 230, 0.3);
+    transform: translateY(-10px);
+  }
+
+  .service-card h2 {
+    color: #0073e6;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+   /* FAQ Section */
+  .faq-section {
+    max-width: 1200px;
+    width: 100%;
+    margin:auto;
+  }
+
+  .faq-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: #0073e6;
+    font-weight: 600;
+    text-align:center;
+  }
+
+  /* Individual FAQ Card */
+  .faq-item {
+    background: #fff;
+    border-right: 6px solid #0073e6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.7s forwards;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Stagger animation delays */
+  .faq-item:nth-child(1) { animation-delay: 0.15s; }
+  .faq-item:nth-child(2) { animation-delay: 0.35s; }
+  .faq-item:nth-child(3) { animation-delay: 0.55s; }
+  .faq-item:nth-child(4) { animation-delay: 0.75s; }
+  .faq-item:nth-child(5) { animation-delay: 0.95s; }
+  .faq-item:nth-child(6) { animation-delay: 1.15s; }
+
+  .faq-item:hover {
+    box-shadow: 0 15px 40px rgba(0, 115, 230, 0.3);
+  }
+
+  .faq-question {
+    padding: 20px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    user-select: none;
+    position: relative;
+  }
+
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 30px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: '−';
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 300px; /* enough height for content */
+    padding: 15px 30px 25px 30px;
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+.fubo-footer {
+  background: #fff;
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.2);
+  border-bottom: 3px solid #0b3fae;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.fubo-footer .footer-content {
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.fubo-footer a {
+  color: #0b3fae;
+  text-decoration: underline;
+}
+
+  
   </style>
 </head>
 <body>
@@ -184,6 +352,38 @@
     <h1>How to Contact Fubo TV</h1>
     <p>Learn everything you need to know about Fubo TV support, how to reach fubo tv customer care, and get the help you need with this complete guide.</p>
   </section>
+  
+  <section class="service-section" aria-label="How to contact Fubo TV services">
+  <article class="service-card">
+    <h2>Fubo TV Support Overview</h2>
+    <p>Fubo TV support offers guidance for account setup, streaming quality, billing questions, and troubleshooting to ensure smooth user experiences.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Account and Login Help</h2>
+    <p>Need assistance with logging in or managing your subscription? Fubo TV customer care can assist you with secure recovery and account settings.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Streaming and Technical Problems</h2>
+    <p>If you encounter buffering or app crashes, Fubo TV customer support will help diagnose and fix these issues for uninterrupted viewing.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Billing and Payment Questions</h2>
+    <p>Fubo TV customer service answers questions about charges, subscription plans, and payment methods to keep your service running smoothly.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>Device Setup and Compatibility</h2>
+    <p>From smart TVs to smartphones, Fubo TV customer care helps with installation and device compatibility to ensure the best viewing experience.</p>
+  </article>
+
+  <article class="service-card">
+    <h2>General Inquiries and Feedback</h2>
+    <p>Have questions or feedback? Fubo TV customer support values user input and strives to improve service continuously based on customer needs.</p>
+  </article>
+</section>
 
   <main class="container">
     <h2>Introduction</h2>
@@ -252,7 +452,76 @@
     <p>
       Keep this guide handy for future reference, especially if you're ever in a situation where you need to reach fubo tv support quickly. Knowing the ins and outs of how Fubo TV customer service operates will save you time and help you get back to enjoying your favorite shows and games without disruption.
     </p>
+    
+    
   </main>
+  
+  
+  <section class="faq-section" aria-label="Frequently asked questions about how to contact Fubo TV">
+  <div class="faq-title"> FAQ</div>
+
+  <div class="faq-item">
+    <div class="faq-question">What are the main ways to contact Fubo TV customer support?</div>
+    <div class="faq-answer">
+      Fubo TV customer support can be contacted through the app’s help center, live chat, or by submitting a support ticket via their official website. Each method is designed to assist with account, streaming, or billing issues efficiently.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Does Fubo TV offer phone support for customers?</div>
+    <div class="faq-answer">
+      While direct phone support is limited, Fubo TV customer care primarily relies on online chat and help center resources to resolve issues quickly. Users can find extensive self-help content and chat with representatives in real time.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How can I troubleshoot streaming issues on Fubo TV?</div>
+    <div class="faq-answer">
+      For streaming problems, Fubo TV support recommends checking your internet connection, restarting your device, updating the app, or clearing cache. If problems persist, contacting Fubo TV customer support via chat can provide personalized assistance.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I manage my subscription via Fubo TV customer service?</div>
+    <div class="faq-answer">
+      Yes, Fubo TV customer care can assist with subscription upgrades, downgrades, cancellations, and billing inquiries to ensure your plan meets your needs.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is there 24/7 support available for Fubo TV users?</div>
+    <div class="faq-answer">
+      Fubo TV offers extended customer support hours, though availability may vary by region. The help center and automated support tools remain accessible anytime for quick answers.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Where can I find official updates or announcements from Fubo TV?</div>
+    <div class="faq-answer">
+      Official updates about service changes, features, or outages are shared through Fubo TV’s app notifications and on their official website under the support section.
+    </div>
+  </div>
+</section>
+
+<footer class="fubo-footer">
+  <div class="footer-content">
+    <p>
+      <strong>How to contact fubo TV:</strong><br>
+      Visit <a href="https://charter-hub.blogspot.com/2025/08/charter-customer-support.html">fubo tv support</a>
+      Support available 24/7.
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  // Simple toggle FAQ answers
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
 
 </body>
 </html>
